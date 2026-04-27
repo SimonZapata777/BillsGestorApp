@@ -1,5 +1,7 @@
 package com.example.BillsGestor.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -32,6 +34,10 @@ public class GastoService {
         }
 
         return gastoRepository.save(datosGasto);
+    }
+
+    public List<Gasto> listar_Gastos(){
+        return gastoRepository.findAll();
     }
 
     public Gasto buscarGastoPorId(Integer id) {
