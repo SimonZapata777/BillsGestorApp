@@ -18,7 +18,7 @@ public class ComercioService {
     private IComercio comercioRepository;
 
 
-    public Comercio guardar(Comercio datosComercio){
+    public Comercio guardarComercio(Comercio datosComercio){
 
         if (datosComercio.getEstado() == null || datosComercio.getFechaRegistro().isAfter(LocalDate.now())){
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Tiene una fecha incorrecta");
